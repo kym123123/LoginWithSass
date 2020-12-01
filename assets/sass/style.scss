@@ -23,7 +23,7 @@ $input-button-h: 28px;
     display: swap;
   }
   margin: {
-   bottom: 12%; 
+   bottom: 20%; 
   }
 }
 @mixin input-label {
@@ -76,16 +76,7 @@ body{
 .container {
   width: 100%;
   .login-title {
-    font: {
-      family: 'Arimo', Arial, Helvetica, sans-serif;
-      size: 2.5rem;
-      style: normal;
-      weight: 700;
-      display: swap;
-    }
-    margin: {
-     bottom: 12%; 
-    }
+    @include title-form;
   }
   .login-form {
     // display: none;
@@ -139,8 +130,9 @@ body{
     }
   }
   .signup-form {
-    display: none;
+    // display: none;
     @include form-base;
+    padding-bottom: 15px;
     .signup-title {
       @include title-form;
     }
@@ -173,6 +165,10 @@ body{
     }
     .signup-button {
       @include pink-button;
+    }
+    .signup-button-cancel {
+      @extend .signup-button;
+      margin-top: 15px;
     }
   }
 }
