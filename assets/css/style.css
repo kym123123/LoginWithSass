@@ -1,4 +1,227 @@
-.container .item {
-  width: 100px;
-  height: 100px;
-  background: tomato; }
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Arimo:wght@700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Arimo', Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #c322c0;
+  background: linear-gradient(180deg, #c322c0 0%, #2d31fd 100%);
+  padding-top: 20px;
+}
+
+.container {
+  width: 100%;
+}
+
+.container .login-title {
+  font-family: 'Arimo', Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  margin-bottom: 12%;
+}
+
+.container .login-form {
+  position: relative;
+  padding: 5%;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 11%;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.container .login-form .login-id-container {
+  position: relative;
+}
+
+.container .login-form .login-id-container #login-email {
+  margin-bottom: 30px;
+  width: 200px;
+  height: 28px;
+  border-width: 0;
+  border-bottom: 1px solid gray;
+}
+
+.container .login-form .login-id-container .login-email-label {
+  position: absolute;
+  color: gray;
+  display: block;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  top: 0;
+  left: 20px;
+}
+
+.container .login-form .login-pw-container {
+  position: relative;
+}
+
+.container .login-form .login-pw-container #login-password {
+  margin-bottom: 30px;
+  width: 200px;
+  height: 28px;
+  border-width: 0;
+  border-bottom: 1px solid gray;
+  margin-bottom: 18px;
+}
+
+.container .login-form .login-pw-container .login-password-label {
+  position: absolute;
+  color: gray;
+  display: block;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  top: 0;
+  left: 20px;
+}
+
+.container .login-form .fa-envelope, .container .login-form .fa-lock {
+  margin-right: 3%;
+}
+
+.container .login-form .login-button {
+  background-color: #c322c0;
+  border: 0;
+  border-radius: 3px;
+  width: 200px;
+  padding: 10px 30px;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.container .login-form .login-remember-container {
+  text-align: left;
+  line-height: 1.3rem;
+}
+
+.container .login-form .login-remember-container #input-remember-me {
+  vertical-align: sub;
+}
+
+.container .login-form .login-remember-container .login-remember-label {
+  font-size: 1.3rem;
+  color: gray;
+}
+
+.container .login-form .goto-signup {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+
+.container .signup-form {
+  display: none;
+  position: relative;
+  padding: 5%;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 11%;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.container .signup-form .signup-title {
+  font-family: 'Arimo', Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  margin-bottom: 12%;
+}
+
+.container .signup-form .signup-email-container {
+  position: relative;
+}
+
+.container .signup-form .signup-email-container #signup-email {
+  margin-bottom: 30px;
+  width: 200px;
+  height: 28px;
+  border-width: 0;
+  border-bottom: 1px solid gray;
+}
+
+.container .signup-form .signup-email-container .signup-email-label {
+  position: absolute;
+  color: gray;
+  display: block;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  top: 0;
+  left: 20px;
+}
+
+.container .signup-form .signup-password-container {
+  position: relative;
+}
+
+.container .signup-form .signup-password-container #signup-password {
+  margin-bottom: 30px;
+  width: 200px;
+  height: 28px;
+  border-width: 0;
+  border-bottom: 1px solid gray;
+}
+
+.container .signup-form .signup-password-container .signup-password-label {
+  position: absolute;
+  color: gray;
+  display: block;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  top: 0;
+  left: 20px;
+}
+
+.container .signup-form .signup-confirm-password-container {
+  position: relative;
+}
+
+.container .signup-form .signup-confirm-password-container #signup-confirm-password {
+  margin-bottom: 30px;
+  width: 200px;
+  height: 28px;
+  border-width: 0;
+  border-bottom: 1px solid gray;
+}
+
+.container .signup-form .signup-confirm-password-container .signup-confirm-password-label {
+  position: absolute;
+  color: gray;
+  display: block;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  top: 0;
+  left: 20px;
+}
+
+.container .signup-form .signup-button {
+  background-color: #c322c0;
+  border: 0;
+  border-radius: 3px;
+  width: 200px;
+  padding: 10px 30px;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}

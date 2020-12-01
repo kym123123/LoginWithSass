@@ -3,12 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SCSS test</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <title>Login</title>
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="./assets/js/index.js"></script>
 </head>
 <body>
   <div class="container">
-    <div class="item"></div>
+    <form class="login-form" novalidate>
+      <h2 class="login-title">LOGIN</h2>
+      <div class="login-id-container">
+        <label class="login-email-label" for="login-email"><i class="far fa-envelope"></i> Email</label>
+        <input type="text" id="login-email" required/>
+        <span class="login-email-line"></span>
+      </div>
+      <div class="login-pw-container">
+        <label class="login-password-label" for="login-password"><i class="fas fa-lock"></i> Password</label>
+        <input type="text" id="login-password" required/>
+        <span class="login-password-line"></span>
+      </div>
+      <div class="login-remember-container">
+        <input type="checkbox" id="input-remember-me" />
+        <label class="login-remember-label" for="input-remember-me">Remember me</label>
+      </div>
+      <button class="login-button" disabled>LOGIN</button>
+      <div class="goto-signup">
+        <span class="goto-signup-text">Not a member? <a href="javascript:void(0);" class="goto-signup-link">Sign Up</a></span>
+      </div>
+    </form>
+
+    <form class="signup-form">
+      <h2 class="signup-title">SIGN UP</h2>
+      <div class="signup-email-container">
+        <label class="signup-email-label" for="signup-email"><i class="far fa-envelope"></i> Email</label>
+        <input type="text" id="signup-email" required/>
+        <span class="signup-email-line"></span>
+      </div>
+      <div class="signup-password-container">
+        <label class="signup-password-label" for="signup-password"><i class="fas fa-lock"></i> Password</label>
+        <input type="text" id="signup-password" required/>
+        <span class="signup-password-line"></span>
+      </div>
+      <div class="signup-confirm-password-container">
+        <label class="signup-confirm-password-label" for="signup-confirm-password"><i class="fas fa-lock"></i> Confirm password</label>
+        <input type="text" id="signup-confirm-password" required/>
+        <span class="signup-confirm-password-line"></span>
+      </div>
+      <button class="signup-button" disabled>SIGN UP</button>
+    </form>
   </div>
 </body>
 </html>

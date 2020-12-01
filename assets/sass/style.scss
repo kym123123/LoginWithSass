@@ -1,8 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arimo:wght@700&display=swap');
+$bg-gradient: linear-gradient(180deg, rgba(195,34,192,1) 0%, rgba(45,49,253,1) 100%);
+$input-button-w: 200px;
+$input-button-h: 28px;
+@mixin form-base {
+  position: relative;
+  padding: 5%;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 11%;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+}
+@mixin title-form {
+  font: {
+    family: 'Arimo', Arial, Helvetica, sans-serif;
+    size: 2.5rem;
+    style: normal;
+    weight: 700;
+    display: swap;
+  }
+  margin: {
+   bottom: 12%; 
+  }
+}
+@mixin input-label {
+  position: absolute;
+  color: gray;
+  display: block;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  top: 0;
+  left: 20px;
+}
+@mixin input-frame {
+  margin-bottom: 30px;
+  width: $input-button-w;
+  height: $input-button-h;
+  border : {
+    width: 0;
+    bottom: 1px solid gray;
+  }
+}
+@mixin pink-button {
+  background-color: rgba(195,34,192,1);
+  border: 0;
+  border-radius: 3px;
+  width: $input-button-w;
+  padding: 10px 30px;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  @content;
+}
+* , *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  font: {
+    family: 'Arimo', Arial, Helvetica, sans-serif;
+    size: 10px;
+  }
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  background: rgb(195,34,192);
+  background: $bg-gradient;
+  padding: {
+    top: 20px;
+  }
+}
 .container {
-  $size: 100px;
-  .item {
-    width: $size;
-    height: $size;
-    background: tomato;
+  width: 100%;
+  .login-title {
+    font: {
+      family: 'Arimo', Arial, Helvetica, sans-serif;
+      size: 2.5rem;
+      style: normal;
+      weight: 700;
+      display: swap;
+    }
+    margin: {
+     bottom: 12%; 
+    }
+  }
+  .login-form {
+    // display: none;
+    @include form-base;
+    .login-id-container{
+      position: relative;
+      #login-email {
+        @include input-frame;
+      }
+      .login-email-label {
+        @include input-label;
+      }
+    }
+    .login-pw-container{
+      position: relative;
+      #login-password {
+        @include input-frame;
+        margin-bottom: 18px;
+      }
+      .login-password-label {
+        @include input-label;
+      }
+    }
+    .fa-envelope, .fa-lock{
+      margin-right: 3%;
+    }
+    .login-button {
+      @include pink-button;
+      margin-top: 30px;
+    }
+    .login-remember-container {
+      text-align: left;
+      line-height: 1.3rem;
+      #input-remember-me {
+        vertical-align: sub;
+      }
+      .login-remember-label {
+        font-size: 1.3rem;
+        color: gray;
+      }
+    }
+    .goto-signup {
+      position: absolute;
+      bottom:30px;
+      left:0;
+      right: 0;
+      font: {
+        size: 1.3rem;
+      }
+      margin-top: 20px;
+    }
+  }
+  .signup-form {
+    display: none;
+    @include form-base;
+    .signup-title {
+      @include title-form;
+    }
+    .signup-email-container {
+      position: relative;
+      #signup-email {
+        @include input-frame;
+      }
+      .signup-email-label {
+        @include input-label;
+      }
+    }
+    .signup-password-container {
+      position: relative;
+      #signup-password {
+        @include input-frame;
+      }
+      .signup-password-label {
+        @include input-label;
+      }
+    }
+    .signup-confirm-password-container {
+      position: relative;
+      #signup-confirm-password {
+        @include input-frame;
+      }
+      .signup-confirm-password-label {
+        @include input-label;
+      }
+    }
+    .signup-button {
+      @include pink-button;
+    }
   }
 }
